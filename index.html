@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <main id="main-doc">
+      <nav id="navbar">
+        <header>Cloud Computing Fundamentals</header>
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#What_is_Cloud_Computing?" class="nav-link">What is Cloud Computing?</a>
+        <a href="#Cloud_Service_Models" class="nav-link">Cloud Service Models</a>
+        <a href="#Cloud_Deployment_Models" class="nav-link">Cloud Deployment Models</a>
+        <a href="#Major_Cloud_Providers" class="nav-link">Major Cloud Providers</a>
+        <a href="#Benefits_of_Cloud_Computing" class="nav-link">Benefits of Cloud Computing</a>
+        <a href="#Challenges_in_Cloud_Computing" class="nav-link">Challenges in Cloud Computing</a>
+        <a href="#Virtualization_and_Containers" class="nav-link">Virtualization and Containers</a>
+        <a href="#Cloud_Storage" class="nav-link">Cloud Storage</a>
+        <a href="#Cloud_Networking_and_Security" class="nav-link">Cloud Networking and Security</a>
+        <a href="#Serverless_Computing" class="nav-link">Serverless Computing</a>
+        <a href="#Artificial_Intelligence_in_Cloud_Computing" class="nav-link">Artificial Intelligence in Cloud Computing</a>
+        <a href="#Internet_of_Things_(IoT)_and_Cloud" class="nav-link">Internet of Things (IoT) and Cloud</a>
+        <a href="#References" class="nav-link">References</a>
+      </nav>
+      <section class="main-section" id="Introduction">
+        <span>* As informações presentes nessa documentação foram totalmente feitas por Inteligência Artificial e não houve nenhuma verificação de veracidade do conteúdo<br>* The information in this documentation was entirely created by Artificial Intelligence and there was no verification of the veracity of the content</span>
+        <header>Introduction</header>
+        <p class="indent">Cloud computing has revolutionized the way we store, process, and access data and applications. This document explores its fundamental concepts, service models, advantages, challenges, and future trends.</p>
+      </section>
+      <section class="main-section" id="What_is_Cloud_Computing?">
+        <header>What is Cloud Computing?</header>
+        <p class="indent">Cloud computing is the on-demand delivery of computing services over the internet. These services include servers, storage, databases, networking, software, and data analytics. The main advantages of cloud computing are scalability, cost efficiency, and flexibility.</p>
+      </section>
+      <section class="main-section" id="Cloud_Service_Models">
+        <header>Cloud Service Models</header>
+        <p class="indent">There are three main cloud service models:</p>
+        <ul>
+          <li>Infrastructure as a Service (IaaS): Provides virtualized computing resources, such as virtual machines, storage, and networking.</li>
+          <li>Platform as a Service (PaaS): Offers a development platform that includes operating systems, databases, and runtime environments.</li>
+          <li>Software as a Service (SaaS): Delivers software applications via a web browser without requiring installation.</li>
+        </ul>
+        <p class="indent">Example of provisioning a virtual machine in AWS using Python:</p>
+        <div class="code indent">
+          <code>import boto3 <br>
+        ec2 = boto3.resource('ec2')<br><br>instance = ec2.create_instances(<br>ImageId='ami-0abcdef1234567890',<br>MinCount=1,<br>MaxCount=1,<br>InstanceType='t2.micro'<br>)<br>print(f'Instance {instance[0].id} created successfully!'</code>
+        </div>
+      </section>
+      <section class="main-section" id="Cloud_Deployment_Models">
+        <header>Cloud Deployment Models</header>
+        <p class="indent">Cloud computing can be deployed in different ways:</p>
+        <ul>
+          <li>Public Cloud: Resources are shared among multiple customers.</li>
+          <li>Private Cloud: Infrastructure is dedicated to a single organization.</li>
+          <li>Hybrid Cloud: A combination of public and private clouds for enhanced flexibility.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Major_Cloud_Providers">
+        <header>Major Cloud Providers</header>
+        <p class="indent">The leading cloud providers include:</p>
+        <ul>
+          <li>Amazon Web Services (AWS)</li>
+          <li>Microsoft Azure</li>
+          <li>Google Cloud Platform (GCP)</li>
+        </ul>
+        <p class="indent">Example of deploying an application on Azure using the Azure CLI:</p>
+        <div class="code"><code>az webapp create --resource-group MyResourceGroup --plan MyAppServicePlan --name MyUniqueAppName --runtime "PYTHON:3.8"</code></div>
+      </section>
+      <section class="main-section" id="Benefits_of_Cloud_Computing">
+        <header>Benefits of Cloud Computing</header>
+        <p class="indent">Cloud computing offers several benefits:</p>
+        <ul>
+          <li>Scalability: Resources can be adjusted based on demand.</li>
+          <li>Flexibility: Users can access services from anywhere.</li>
+          <li>Cost Efficiency: No upfront hardware investments.</li>
+          <li>Global Accessibility: Services can be used worldwide.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Challenges_in_Cloud_Computing">
+        <header>Challenges in Cloud Computing</header>
+        <p class="indent">Despite its advantages, cloud computing presents challenges:</p>
+        <ul>
+          <li>Security and Privacy: Data protection and compliance concerns.</li>
+          <li>Internet Dependency: Continuous internet connection is required.</li>
+          <li>Regulatory Compliance: Organizations must adhere to legal and industry standards.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Virtualization_and_Containers">
+        <header>Virtualization and Containers</header>
+        <p class="indent">Virtualization and containerization are key technologies in cloud computing:</p>
+        <ul>
+          <li>Virtual Machines (VMs): Emulate physical computers.</li>
+          <li>Containers (e.g., Docker, Kubernetes): Provide lightweight, portable application environments.</li>
+        </ul>
+        <p class="indent">Example of creating a Docker container:</p>
+        <div class="code"><code>docker run -d -p 80:80 nginx</code></div>
+      </section>
+      <section class="main-section" id="Cloud_Storage">
+        <header>Cloud Storage</header>
+        <p class="indent">Cloud storage solutions include:</p>
+        <ul>
+          <li>Object Storage: Stores large volumes of unstructured data.</li>
+          <li>File Storage: Provides shared access to files.</li>
+          <li>Managed Databases: Cloud-based relational and NoSQL databases.</li>
+        </ul>
+        <p class="indent">Example of storing a file in AWS S3 using Python:</p>
+        <div class="code"><code>import boto3<br><br>s3 = boto3.client('s3')<br>s3.upload_file('localfile.txt', 'mybucket', 'remote-file.txt')<br>print("File uploaded successfully!")</code></div>
+      </section>
+      <section class="main-section" id="Cloud_Networking_and_Security">
+        <header>Cloud Networking and Security</header>
+        <ul>
+          <li>Virtual Firewalls: Control traffic flow.</li>
+          <li>Encryption: Ensures data confidentiality.</li>
+          <li>Identity and Access Management (IAM): Manages user permissions.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Serverless_Computing">
+        <header>Serverless Computing</header>
+        <p class="indent">Serverless computing enables developers to run code without managing infrastructure. Examples include AWS Lambda, Azure Functions, and Google Cloud Functions.</p>
+        <p class="indent">Example of an AWS Lambda function:</p>
+        <div class="code"><code>import json<br><br>def lambda_handler(event, context):<br>return {<br>'statusCode': 200,<br>'body': json.dumps('Hello from AWS Lambda!')<br>]<br></code></div>
+      </section>
+      </section>
+      <section class="main-section" id="Artificial_Intelligence_in_Cloud_Computing">
+        <header>Artificial Intelligence in Cloud Computing</header>
+        <p class="indent">Cloud platforms offer AI and machine learning services, such as TensorFlow on Google Cloud and Azure AI.</p>
+      </section>
+      <section class="main-section" id="Internet_of_Things_(IoT)_and_Cloud">
+        <header>Internet of Things (IoT) and Cloud</header>
+        <p class="indent">Cloud services support IoT applications by processing and analyzing data from connected devices.</p>
+        <p class="indent">Example of sending IoT data to AWS IoT Core:</p>
+        <div class="code"><code>import boto3<br><br>iot = boto3.client('iot-data', region_name='us-west-2')<br><br>response = iot.publish(<br>topic='iot/topic',<br>payload='{"temperature": 25}'<br>)<br>print("IoT data sent successfully!")</code></div>
+      </section>
+      <section class="main-section" id="References">
+        <header>References</header>
+        <ul>
+          <li>Armbrust, M. et al. (2010). "A View of Cloud Computing". Communications of the ACM.</li>
+          <li>Mell, P., & Grance, T. (2011). "The NIST Definition of Cloud Computing".</li>
+          <li>Amazon Web Services, Microsoft Azure, and Google Cloud Documentation.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

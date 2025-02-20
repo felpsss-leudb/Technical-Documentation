@@ -1,0 +1,64 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  #navbar {
+    display: flex;
+    position: fixed;
+    text-align: center;
+    float: left;
+    width: 100%;
+    height: 100vh;
+    max-width: 40vh;
+    flex-direction: column;
+    border-right: 3px solid black;
+  }
+  
+  #navbar header {
+    font-size: 5vh;
+    padding: 3vh;
+  }
+  
+  #navbar a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    border-top: 1px solid black;
+    padding: 0.5rem 0 0.5rem;
+  }
+  
+  /* main sections */
+  
+  .main-section {
+    display: block;
+    margin: 0 4vh 0 43vh;
+    color: #303030;
+    font-size: 1.1rem;
+  }
+  
+.main-section span {
+    color: red;
+    margin-top: 15px;
+    
+}
+
+  .main-section header {
+    padding-top: 3vh;
+    font-size: 1.7rem;
+  }
+  
+  .indent {
+    margin-left: 3vh;
+  }
+  
+  .main-section li {
+    padding: 5px 0 5px 0;
+  }
+  
+  .main-section .code {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+  }
